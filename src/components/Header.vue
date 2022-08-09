@@ -1,14 +1,16 @@
 <template>
     <div class="md:flex justify-between items-center md:px-[10%] bg-white pb-4">
-      <img class="h-20 md:h-24 mx-auto md:mx-0" src="https://sis.vnu.edu.vn/images/VNU-SIS-logo(vns).png" alt="">
+    <router-link to="/">
+        <img class="h-20 md:h-24 mx-auto md:mx-0" src="https://sis.vnu.edu.vn/images/VNU-SIS-logo(vns).png" alt="">
+    </router-link>
       <form class="px-10 md:px-0 md:w-[300px] lg:w-[350px] mt-4 md:mt-0">   
-        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
+        <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Tìm kiếm</label>
         <div class="relative">
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <svg aria-hidden="true" class="w-5 h-5 text-gray-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
-            <input type="search" id="default-search" class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Tìm kiếm..." required>
-            <button type="submit" class="text-white absolute right-2 bottom-[5px] bg-[#0d2c6c] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>
+            <input type="search" id="default-search" class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Nhập từ khóa..." required>
+            <button type="submit" class="text-white absolute right-2 bottom-[5px] bg-[#0d2c6c] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 ">Tìm kiếm</button>
         </div>
       </form>
     </div>
@@ -46,7 +48,7 @@
                     <a class="nav-link block pr-2 lg:px-2 py-2  hover:text-[#d68c06] focus:text-[#d68c06] transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Trang chủ</a>
                 </li>
                 <li class="nav-item text-white uppercase font-semibold">
-                    <a class="nav-link block pr-2 lg:px-2 py-2  hover:text-[#d68c06] focus:text-[#d68c06] transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Thông báo</a>
+                    <a class="nav-link block pr-2 lg:px-2 py-2  hover:text-[#d68c06] focus:text-[#d68c06] transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light">Thông báo</a>
                 </li>
                 <li class="nav-item text-white uppercase font-semibold">
                     <a class="nav-link block pr-2 lg:px-2 py-2  hover:text-[#d68c06] focus:text-[#d68c06] transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">Quy định</a>
@@ -79,3 +81,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.dropdown:hover > .dropdown-content {
+	display: block;
+}
+</style>
